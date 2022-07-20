@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import SolarSystem from './components/SolarSystem';
+import Missions from './components/Missions';
 // oliva <3
 class App extends React.Component {
   render() {
@@ -8,6 +9,7 @@ class App extends React.Component {
       <div>
         <Header />
         <SolarSystem />
+        <Missions />
       </div>
     );
   }
