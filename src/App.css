@@ -1,4 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500;600&display=swap') ;
+/* stylelint-disable property-no-vendor-prefix */
+:root {
+
+  --bg-img: url('./images/background2.png');
+
+  --main-title-color: white;
+
+  --sub-title-color: white;
+
+  --text-color: white;
+
+  --main-font: oswald , sans-serif;
+
+  --card-bg-blur: blur(5.5px);
+
+  --card-bg-color: rgba(151, 150, 150, 0.35);
+
+  --card-border: 1px solid rgba(255, 255, 255, 0.18);
+
+  --card-border-radius: 16px;
+
+  --card-box-shadow: 0 8px 32px 0 rgba(12, 13, 29, 0.699);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600&display=swap') ;
 
 * {
   box-sizing: border-box;
@@ -11,24 +35,27 @@
 }
 
 body {
-  background-image: url('./images/background2.png');
+  background-image: var(--bg-img);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100%;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1 {
-  color: white;
-  font-family: Oswald , sans-serif;
+  color: var(--main-title-color);
+  font-family: var(--main-font);
   font-size: 69px;
+  padding: 50px 50px 0;
   text-align: center;
 }
 
 h2 {
-  color: white;
-  font-family: Oswald , sans-serif;
+  color: var(--sub-title-color);
+  font-family: var(--main-font);
   font-size: 34px;
   font-weight: 400;
+  padding: 20px 50px;
   text-align: center;
 }
 
@@ -52,8 +79,8 @@ h2 {
 }
 
 .planet-name {
-  color: white;
-  font-family: Oswald , sans-serif;
+  color: var(--text-color);
+  font-family: var(--main-font);
   font-weight: 400;
   text-align: center;
 }
@@ -64,14 +91,19 @@ h2 {
 
 .missions-items {
   display: grid;
-  grid-gap: 20px;
+  grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
+  padding: 35px;
 }
 
 .mission-card {
-  border: 1px solid white;
-  border-radius: 16px;
+  -webkit-backdrop-filter: var(--card-bg-blur);
+  backdrop-filter: var(--card-bg-blur);
+  background: var(--card-bg-color);
+  border: var(--card-border);
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--card-box-shadow);
   color: white;
   font-family: Oswald , sans-serif;
   font-size: 18px;
@@ -80,9 +112,14 @@ h2 {
 }
 
 .mission-card-header {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   font-weight: 500;
   margin-bottom: 10px;
   padding-bottom: 10px;
   text-align: center;
+  text-shadow: rgba(255, 255, 255, 0.1) -1px -1px 1px , rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
+
+.mission-card-body {
+  font-weight: 300;
 }
