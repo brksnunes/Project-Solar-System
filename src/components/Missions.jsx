@@ -13,9 +13,11 @@ class Missions extends React.Component {
       destination={ mission.destination }
     />));
     return (
-      <div data-testid="missions">
+      <div data-testid="missions" className="container">
         <Title headline="Missões" />
-        { missionCardHtmlElement }
+        <div className="missions-items">
+          { missionCardHtmlElement }
+        </div>
       </div>
     );
   }

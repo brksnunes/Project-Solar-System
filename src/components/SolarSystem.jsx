@@ -11,9 +11,11 @@ class SolarSystem extends React.Component {
       planetImage={ planet.image }
     />));
     return (
-      <div data-testid="solar-system">
+      <div data-testid="solar-system" className="container">
         <Title headline="Planetas" />
-        { planetHtmlelement }
+        <div className="solar-system-items">
+          { planetHtmlelement }
+        </div>
       </div>
     );
   }
