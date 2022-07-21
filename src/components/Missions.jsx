@@ -15,6 +15,7 @@ class Missions extends React.Component {
     return (
       <div data-testid="missions" className="container">
         <Title headline="Missões" />
+        <hr className="stroke" />
         <div className="missions-items">
           { missionCardHtmlElement }
         </div>
