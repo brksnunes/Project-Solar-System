@@ -58,9 +58,10 @@ h2 {
   color: var(--sub-title-color);
   font-family: var(--main-font);
   font-size: 34px;
-  font-weight: 200;
+  font-weight: 400;
   padding: 20px 50px;
   text-align: center;
+  text-shadow: var(--text-shadow);
 }
 
 .stroke {
@@ -71,16 +72,14 @@ h2 {
 .container {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 10px auto 0;
   padding: 30px;
   width: 80%;
 }
 
 .solar-system-items {
   display: flex;
-  justify-content: space-around;
   margin: 60px auto 0;
-  width: 90%;
 }
 
 .planet-card {
@@ -98,7 +97,7 @@ h2 {
 }
 
 .planet-image {
-  width: 100%;
+  width: 85%;
 }
 
 .missions-items {
@@ -106,8 +105,8 @@ h2 {
   grid-row-gap: 40px;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;
-  margin-top: 60px;
-  padding: 35px;
+  margin-top: 20px;
+  padding: 25px;
 }
 
 .mission-card {
